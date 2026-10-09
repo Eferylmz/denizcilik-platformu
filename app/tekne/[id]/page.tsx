@@ -37,6 +37,15 @@ interface Boat {
   targetAudience?: string;
 }
 
+// Next.js'in derleme (build) sırasında hangi sayfaları üreteceğini bilmesi için:
+export async function generateStaticParams() {
+  return (boatsData as Boat[]).map((boat) => ({
+    id: String(boat.id),
+  }));
+}
+
+export const dynamicParams = true;
+
 interface Props {
   params: Promise<{ id: string }>;
 }
@@ -49,7 +58,6 @@ export default async function BoatDetailPage({ params }: Props) {
     notFound();
   }
 
-  // Hem eski/yeni formatları hem de JSON'ındaki gerçek derin verileri harmanla
   const titleCategory = boat.segment || boat.type || boat.category || 'Performans Yat';
   const engineAndHull = boat.hullEngine || boat.engine || 'Dizel Sevk Makinesi';
   const ratingText = boat.tccRating || boat.ratingProfile || 'IRC / Gezi Dengeli Profil';
@@ -60,7 +68,6 @@ export default async function BoatDetailPage({ params }: Props) {
 
   return (
     <main className="min-h-screen bg-slate-950 text-slate-100 selection:bg-cyan-500 selection:text-white pb-24">
-      {/* Header */}
       <header className="border-b border-slate-800/80 bg-slate-900/60 backdrop-blur sticky top-0 z-50 px-6 py-4 flex items-center justify-between">
         <Link href="/" className="text-xl font-black tracking-wider text-cyan-400 hover:text-cyan-300 transition">
           PRUVA
@@ -72,7 +79,6 @@ export default async function BoatDetailPage({ params }: Props) {
       </header>
 
       <div className="max-w-5xl mx-auto px-6 pt-10 space-y-10">
-        {/* Üst Bilgi Başlığı */}
         <div className="border-b border-slate-800/80 pb-6">
           <div className="flex flex-wrap items-center justify-between gap-4">
             <div>
@@ -106,7 +112,6 @@ export default async function BoatDetailPage({ params }: Props) {
           </p>
         </div>
 
-        {/* Temel Metrikler */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
           <div className="bg-slate-900/40 border border-slate-800/80 p-4 rounded-xl">
             <span className="text-xs text-slate-500 font-mono block">Su Çekimi (Draft)</span>
@@ -123,12 +128,11 @@ export default async function BoatDetailPage({ params }: Props) {
           <div className="bg-slate-900/40 border border-slate-800/80 p-4 rounded-xl">
             <span className="text-xs text-slate-500 font-mono block">Boyutlar (L / B)</span>
             <span className="text-base font-bold text-white">
-              {boat.length ? `${boat.length}` : 'Özel Yarış'} {boat.beam ? `/ ${boat.beam}` : ''}
+              {boat.length ? `${boat.length}` : 'Özel Seri'} {boat.beam ? `/ ${boat.beam}` : ''}
             </span>
           </div>
         </div>
 
-        {/* Arma & Donanım Vurgusu */}
         {boat.rigging && (
           <div className="bg-slate-900/30 border border-slate-800/60 p-4 rounded-xl flex items-start gap-3">
             <span className="text-cyan-400 text-sm font-mono mt-0.5 font-bold">ARMA //</span>
@@ -138,9 +142,7 @@ export default async function BoatDetailPage({ params }: Props) {
           </div>
         )}
 
-        {/* Derin Veriler: Güçlü Yönler vs Ekspertiz Kontrol Noktaları */}
         <div className="grid md:grid-cols-2 gap-6 pt-2">
-          {/* Güçlü Yönler / Artılar */}
           <div className="bg-slate-900/60 border border-slate-800 p-6 rounded-2xl space-y-4">
             <div className="flex items-center gap-2">
               <span className="w-2.5 h-2.5 rounded-full bg-cyan-400" />
@@ -166,7 +168,6 @@ export default async function BoatDetailPage({ params }: Props) {
             </div>
           </div>
 
-          {/* Ekspertiz / Sörvey Kontrol Noktaları */}
           <div className="bg-amber-950/20 border border-amber-800/40 p-6 rounded-2xl space-y-4">
             <div className="flex items-center gap-2">
               <span className="w-2.5 h-2.5 rounded-full bg-amber-400" />
