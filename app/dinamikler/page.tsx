@@ -104,7 +104,7 @@ export default function DinamiklerPage() {
             </p>
           </div>
         </div>
-      </section>
+ </section>
     </div>
   </main>
   );
