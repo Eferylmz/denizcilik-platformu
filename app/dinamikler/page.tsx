@@ -89,23 +89,23 @@ export default function DinamiklerPage() {
         </section>
 
         <section className="space-y-6 border-t border-slate-800/80 pt-10">
-          <div className="flex items-center gap-3">
-            <span className="text-cyan-400 font-mono text-xl font-bold">03 //</span>
-            <h2 className="text-2xl font-bold text-white">Türkiye'nin Süperyat Gücü ve 23.95m Tescil Taktiği</h2>
-          </div>
-          <div className="space-y-4 text-sm text-slate-300 leading-relaxed">
-            <p>
-              Türkiye, 24 metre üzeri süperyat inşasında İtalya'nın ardından dünya genelinde 2. sıradadır.
+        <div className="flex items-center gap-3">
+          <span className="text-cyan-400 font-mono text-xl font-bold">03 //</span>
+          <h2 className="text-2xl font-bold text-white">Türkiye'nin Süperyat Gücü ve 23.95m Tescil Taktiği</h2>
+        </div>
+        <div className="space-y-4 text-sm text-slate-300 leading-relaxed">
+          <p>
+            Türkiye, 24 metre üzeri süperyat inşasında İtalya'nın ardından dünya genelinde 2. sıradadır.
+          </p>
+          <div className="bg-slate-900/80 p-5 rounded-xl border border-slate-800">
+            <h4 className="font-semibold text-white mb-2">24 Metre Kuralı Nedir?</h4>
+            <p className="text-xs text-slate-400 leading-relaxed">
+              24 metre üzerinde personel ve klasman yükümlülükleri artar. Numarine 26XP gibi tekneler gövde boyunu 23.95m tescil ettirerek bu avantajdan faydalanır.
             </p>
-            <div className="bg-slate-900/80 p-5 rounded-xl border border-slate-800">
-              <h4 className="font-semibold text-white mb-2">24 Metre Kuralı Nedir?</h4>
-              <p className="text-xs text-slate-400 leading-relaxed">
-                24 metre üzerinde personel ve klasman yükümlülükleri artar. Numarine 26XP gibi tekneler gövde boyunu 23.95m tescil ettirerek armatöre küçük tekne bürokrasisi avantajı sağlar.
-              </p>
-            </div>
           </div>
-        </section>
-      </div>
-    </main>
+        </div>
+      </section>
+    </div>
+  </main>
   );
 }
