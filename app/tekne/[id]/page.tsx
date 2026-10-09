@@ -44,7 +44,7 @@ export async function generateStaticParams() {
   }));
 }
 
-export const dynamicParams = true;
+
 
 interface Props {
   params: Promise<{ id: string }>;
