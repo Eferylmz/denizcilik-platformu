@@ -54,7 +54,7 @@ export default function DinamiklerPage() {
               <h3 className="text-white font-semibold text-base">Salma (Keel) ve Doğrultucu Moment</h3>
               <p>
                 Yelken gövdeyi devirmeye çalışırken altındaki kurşun torpilli salma direnç gösterir. 
-                Tekne yana yattıkça salma sarkaç gibi aksi yönde doğrultucu moment üretir; yani bayılma arıza değil, dinamik bir güvenlik dengesidir.
+                Tekne yana yattıkça salma sarkaç gibi aksi yönde doğrultucu moment üretir; yani bayılma bir arıza değil, dinamik bir güvenlik dengesidir.
               </p>
             </div>
           </div>
@@ -107,17 +107,4 @@ export default function DinamiklerPage() {
           </div>
           <div className="space-y-4 text-sm text-slate-300 leading-relaxed">
             <p>
-              Türkiye, 24m üzeri süperyat inşasında 146 aktif projeyle İtalya'nın ardından dünya genelinde 2. sıradadır. Bilgin, Turquoise, Sirena ve Numarine küresel ligdedir.
-            </p>
-            <div className="bg-slate-900/80 p-5 rounded-xl border border-slate-800">
-              <h4 className="font-semibold text-white mb-2">24 Metre Kuralı Nedir?</h4>
-              <p className="text-xs text-slate-400 leading-relaxed">
-                24 metre üstünde zorunlu gemi adamı sayısı, klas denetimleri ve liman harçları katlanır. Numarine 26XP tam boyu 26 metre olmasına rağmen 23.95m olarak tescil edilir; armatöre süperyat hacmini küçük tekne bürokrasisi ve düşük masraflarıyla sunar.
-              </p>
-            </div>
-          </div>
-        </section>
-      </div>
-    </main>
-  );
-}
+              Türkiye, 24m üzeri süperyat inşasında 146 aktif projeyle İtalya'nın ardından dünya genelinde 2. sıradadır. Bil
