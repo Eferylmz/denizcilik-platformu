@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "term": "Saildrive",
+    "category": "Motor & Sevk Sistemleri",
+    "definition": "Motorun altındaki şanzımanın gövdeden doğrudan dikey olarak suya inip pervaneyi çevirdiği sistemdir. Düz şafta göre titreşimi ve gürültüyü ciddi oranda azaltır, salma arkasına hizalandığı için yelken seyrinde sürtünmesi düşüktür; ancak gövde körüğünün periyodik değişimi kritik güvenlik unsurudur.",
+    "question": "Saildrive sistemine sahip bir yelkenlide periyodik ekspertizde en hayati güvenlik kontrolü hangisidir?",
+    "options": [
+      "Şaft kovanı salmastrası aşınması",
+      "Gövde sızdırmazlık körüğü (diyafram) ömrü",
+      "Braket yatağının korozyonu",
+      "Egzoz dirseği açısı"
+    ],
+    "correctIndex": 1,
+    "explanation": "Saildrive gövdeye kalın bir kauçuk conta/körük ile oturur. Bu diyaframın üretici önerisine göre (genelde 5-7 yıl) değişmemesi su alma riski yaratır."
+  },
+  {
+    "id": 2,
+    "term": "Doğrultucu Moment (Righting Moment)",
+    "category": "Yelken Dinamikleri & Denge",
+    "definition": "Tekne rüzgar baskısıyla yana yattığında, kurşun balastlı salmanın ağırlık merkezi ile gövdenin yer değiştiren su hacminin batma merkezi arasındaki mesafe açılarak gövdeyi yeniden dikey konuma getirmeye çalışan fiziki kuvvettir.",
+    "question": "Bir yarış yelkenlisinde tekne yana yattıkça doğrultucu moment nasıl bir değişim gösterir?",
+    "options": [
+      "Sürekli azalır ve devrilmeye yaklaşır",
+      "Belli bir yatma açısına kadar artar, kritik açıdan sonra düşer",
+      "Rüzgar hızından bağımsız olarak hep sabit kalır",
+      "Tekne suya oturdukça sıfırlanır"
+    ],
+    "correctIndex": 1,
+    "explanation": "GZ eğrisine göre tekne yattıkça doğrultucu kol (ve moment) tepe noktasına kadar büyür. Genelde 45-65 derece bandında maksimuma ulaşır, kritik açı aşılırsa azalmaya başlar."
+  },
+  {
+    "id": 3,
+    "term": "Piyano (Pit) Pozisyonu",
+    "category": "Yarış & Ekip Organizasyonu",
+    "definition": "Direk dibinden kokpite gelen tüm mandarlar (halyard), camadan halatları, kalingam (outhaul) ve pupa palangasının toplandığı kıstırmaç (stopper) bataryasını ve piyanist vincini yöneten mevkidir. Balon basma/indirme manevralarının orkestra şefidir.",
+    "question": "Yarışta spinnaker (balon) basılırken piyanistin (pit) en kritik koordinasyon görevi nedir?",
+    "options": [
+      "Ana yelken arabasını rüzgarüstüne çekmek",
+      "Mandar hızlıca basılırken aynı anda kavança halatını boşlamak",
+      "Toka (guy) ve iskota gerilimini orantılayıp mandarı direk tepesine kitlemek",
+      "Dümeni orsaya kaçırmak"
+    ],
+    "correctIndex": 2,
+    "explanation": "Balonun torbalanmadan önce yukarıya hızla kilitlenmesi ve aynı anda tüpün açılması için pit ve direk dibi senkronize çalışmak zorundadır."
+  },
+  {
+    "id": 4,
+    "term": "23.95 Metre Tescil Taktiği",
+    "category": "Mevzuat & Armatörlük",
+    "definition": "Tam boyu (LOA) 26-28 metreye varan lüks motoryatların gövde boyunun (Hull Length) 23.95 metre altında tescil edilmesidir. Amaç, uluslararası denizcilik regülasyonlarında 24 metre üstü için zorunlu kılınan ağır gemi adamı kadrosu ve klas denetim maliyetlerinden muaf kalmaktır.",
+    "question": "24 metre tescil sınırını aşan bir özel motoryat için ortaya çıkan en belirgin işletme külfeti nedir?",
+    "options": [
+      "Motor gücünün sınırlandırılması",
+      "Ticari klasman ve sertifikalı zorunlu profesyonel mürettebat mecburiyeti",
+      "Gece seyrinin yasaklanması",
+      "Sadece çelik sac gövde kullanma zorunluluğu"
+    ],
+    "correctIndex": 1,
+    "explanation": "24 metre eşiği aşıldığında amatör denizci mantığından çıkılır; profesyonel kaptan, çarkçı ve güverte tayfası bulundurma zorunluluğu doğar."
+  }
+]

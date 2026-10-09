@@ -204,7 +204,7 @@
     "designer": "Bruce Farr",
     "hullEngine": "Monolitik Fiber / Volvo Penta Saildrive-Şaft",
     "tccRating": "1.050 - 1.060 (IRC)",
-    "draft": "2.40 m",
+    "draft": "2.40 m (Derin Torpil Salma)",
     "rigging": "Üç Gurcatalı Yarış Arması, Simetrik Balon Donanımı",
     "highlight": "Dünya genelinde 700 adedi aşan üretimiyle küresel referans; Sydney Hobart şampiyonu kült yarışçı.",
     "pros": [
@@ -221,7 +221,16 @@
       "level": "Yüksek (Fiyat/Performans Odaklı)",
       "avgSaleTime": "1 - 3 Ay",
       "targetAudience": "Bütçe dostu yarış takımları ve yelken okulları"
-    }
+    },
+    "year": "2006",
+    "length": "11.99 m",
+    "beam": "3.78 m",
+    "displacement": "6.900 kg",
+    "ballast": "2.707 kg (Kurşun)",
+    "engine": "Volvo Penta D2-40 (Saildrive)",
+    "priceRange": "€95.000 - €125.000",
+    "hullSpeed": "8.1 knot",
+    "marketLiquidity": "9/10 (Türkiye regatta liginde her zaman alıcısı hazır en likit tekne)"
   },
   {
     "id": "bavaria-c42",
@@ -333,7 +342,16 @@
       "level": "Çok Yüksek (Sınıfının Lideri)",
       "avgSaleTime": "2 - 3 Ay",
       "targetAudience": "Süperyat konforunu küçük tekne bürokrasisi ve düşük işletme masrafıyla isteyenler"
-    }
+    },
+    "year": "2023",
+    "length": "25.89 m (Tescil: 23.95 m)",
+    "beam": "6.60 m",
+    "displacement": "77.000 kg",
+    "ballast": "Tam Deplasman / Yarı Deplasman Opsiyonel",
+    "engine": "Çift MAN 560 HP (Düz Şaft)",
+    "priceRange": "€5.200.000 - €6.500.000",
+    "hullSpeed": "11.5 knot (Maks: 13.5 knot, 3.000 mil menzil)",
+    "marketLiquidity": "8/10 (Küresel pazarda yüksek talep gören Türk inşası süperyat)"
   },
   {
     "id": "sirena-118",
@@ -390,5 +408,42 @@
       "avgSaleTime": "12 - 24 Ay",
       "targetAudience": "Küresel süper zenginler (UHNW) ve prestijli uluslararası broker konsorsiyumları"
     }
+  },
+  {
+    "id": "jeanneau-sun-odyssey-440",
+    "name": "Jeanneau Sun Odyssey 440",
+    "segment": "Aile & Mavi Tur (Cruiser)",
+    "category": "Gezi Yelkenlisi",
+    "origin": "Fransa",
+    "designer": "Philippe Briand",
+    "hullEngine": "Yanmar 4JH45 (Şaftlı / Düz Şaft)",
+    "tccRating": "Gezi Odaklı",
+    "draft": "2.20 m (Standart Döküm Salma)",
+    "rigging": "Seldén Arma, Çift Dümen, Walkaround Havuzluk",
+    "highlight": "Basamaksız eğimli yan güverte mimarisiyle kokpitten başüstüne engelsiz yürüyüş sunan uzun yol gezi teknesi.",
+    "pros": [
+      "Walkaround kokpit tasarımıyla seyirde rakipsiz güverte emniyeti",
+      "Geniş gövde formu ve aydınlık iç salon hacmi",
+      "Döviz bazında değerini koruyan yüksek ikinci el talebi"
+    ],
+    "inspectionWatchouts": [
+      "Kıç havuzluk yürüyüş yolu drenaj kanalları",
+      "Çift dümen palası kovan boşlukları ve rulman sağlığı",
+      "Şaft kovan sızdırmazlık körüğü kontrolleri"
+    ],
+    "liquidity": {
+      "level": "Yüksek",
+      "avgSaleTime": "2 - 3 Ay",
+      "targetAudience": "Konforlu Göcek/Ege turları, aile armatörleri ve kiralama filoları"
+    },
+    "year": "2021",
+    "length": "13.00 m",
+    "beam": "4.29 m",
+    "displacement": "8.561 kg",
+    "ballast": "2.280 kg (Pik Döküm)",
+    "engine": "Yanmar 4JH45 (Şaftlı / Düz Şaft)",
+    "priceRange": "€240.000 - €310.000",
+    "hullSpeed": "8.4 knot",
+    "marketLiquidity": "8.5/10 (İkinci elde değerini döviz bazında koruyan yüksek talep)"
   }
 ]
