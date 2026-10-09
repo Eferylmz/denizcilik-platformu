@@ -17,7 +17,7 @@ interface Boat {
   targetAudience: string;
 }
 
-const boats: Boat[] = boatsData as Boat[];
+const boats = boatsData as unknown as Boat[]; // veya (boatsData as any)
 
 export default function TekneBulucu() {
   const [step, setStep] = useState(1);

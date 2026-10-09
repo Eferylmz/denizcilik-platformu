@@ -10,10 +10,10 @@ interface Boat {
   hullEngine: string;
   highlight: string;
   pros: string[];
-  targetAudience: string;
+  targetAudience?: string;
 }
 
-const boats: Boat[] = boatsData as Boat[];
+const boats: Boat[] = boatsData as unknown as Boat[];
 
 export default function Home() {
   return (
