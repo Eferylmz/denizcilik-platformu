@@ -1,62 +1,242 @@
 [
   {
-    "id": 1,
-    "term": "Saildrive",
-    "category": "Motor & Sevk Sistemleri",
-    "definition": "Motorun altındaki şanzımanın gövdeden doğrudan dikey olarak suya inip pervaneyi çevirdiği sistemdir. Düz şafta göre titreşimi ve gürültüyü ciddi oranda azaltır, salma arkasına hizalandığı için yelken seyrinde sürtünmesi düşüktür; ancak gövde körüğünün periyodik değişimi kritik güvenlik unsurudur.",
-    "question": "Saildrive sistemine sahip bir yelkenlide periyodik ekspertizde en hayati güvenlik kontrolü hangisidir?",
+    "id": "term-01",
+    "title": "Forestay Sag (Baş Istralya Sarkması)",
+    "category": "Arma Dinamiği",
+    "definition": "Orsa seyrinde rüzgar yükü arttıkça baş ıstralyanın rüzgar altına doğru yay çizmesi durumudur. Flok orza profilini derinleştirip toru geriye kaydırır; teknenin bayılmasını artırırken orsa tırmanma açısını bozar. Yarış ekipleri bu etkiyi kırmak için kıç ıstralya (backstay) hidroliğini/palangasını basar.",
+    "fieldNote": "Hafif havada bilerek bir miktar sag bırakılarak yelkene güç kazandırılır, sert havada kütük gibi gerilir.",
+    "question": "Sert havada (22+ knot) orsa seyrederken teknenin aşırı bayıldığını ve dümende sert orsalama eğilimi (weather helm) olduğunu fark ettiniz. Kıç ıstralyayı (backstay) basmak ne işe yarar?",
     "options": [
-      "Şaft kovanı salmastrası aşınması",
-      "Gövde sızdırmazlık körüğü (diyafram) ömrü",
-      "Braket yatağının korozyonu",
-      "Egzoz dirseği açısı"
+      "Direğin tepesini öne iter ve flok torunu derinleştirir.",
+      "Forestay sag'i azaltarak ön yelken torunu düzleştirir ve rüzgar tahliyesini kolaylaştırır.",
+      "Salma katsayısını artırarak teknenin sürüklenmesini tamamen durdurur.",
+      "Direk tabanına binen kompresyon yükünü sıfırlar."
     ],
     "correctIndex": 1,
-    "explanation": "Saildrive gövdeye kalın bir kauçuk conta/körük ile oturur. Bu diyaframın üretici önerisine göre (genelde 5-7 yıl) değişmemesi su alma riski yaratır."
+    "explanation": "Backstay kasıldığında direk arkaya bükülür (mast bend) ve baş ıstralya gerilir. Bu sayede ön yelkenin toru düzleşir, yelken açılır ve bayılma momenti ciddi oranda düşer."
   },
   {
-    "id": 2,
-    "term": "Doğrultucu Moment (Righting Moment)",
-    "category": "Yelken Dinamikleri & Denge",
-    "definition": "Tekne rüzgar baskısıyla yana yattığında, kurşun balastlı salmanın ağırlık merkezi ile gövdenin yer değiştiren su hacminin batma merkezi arasındaki mesafe açılarak gövdeyi yeniden dikey konuma getirmeye çalışan fiziki kuvvettir.",
-    "question": "Bir yarış yelkenlisinde tekne yana yattıkça doğrultucu moment nasıl bir değişim gösterir?",
+    "id": "term-02",
+    "title": "Piyano (Pit / Deck Organiser & Clutches)",
+    "category": "Kokpit Ergonomisi",
+    "definition": "Direk dibinden gelen tüm mandar, camadan, pupa palangası (vang) ve cunningham gibi trim halatlarının havuzluk girişinde stopere (clutch) ve piyanist vinçlerine toplandığı merkezi kontrol konsoludur.",
+    "fieldNote": "Hatalı kilit kaçırması; ayıbacağı veya balon basma esnasında mandarın kaçmasına ve balonun suya gömülmesine yol açar.",
+    "question": "Yarışta şamandıra dönüşünde asimetrik spinnaker basılırken 'Piyano' pozisyonundaki mürettebatın en kritik görevi nedir?",
     "options": [
-      "Sürekli azalır ve devrilmeye yaklaşır",
-      "Belli bir yatma açısına kadar artar, kritik açıdan sonra düşer",
-      "Rüzgar hızından bağımsız olarak hep sabit kalır",
-      "Tekne suya oturdukça sıfırlanır"
+      "Ana yelken iskotasını hızla laçka etmek.",
+      "Balon mandarını (halyard) kilit kaçırmadan tam tepeye kadar seri şekilde basıp stoperi emniyete almak.",
+      "Dümeni rüzgar üstüne sertçe kırarak teknenin bayılmasını izlemek.",
+      "Teknenin motor devrini kontrol etmek."
     ],
     "correctIndex": 1,
-    "explanation": "GZ eğrisine göre tekne yattıkça doğrultucu kol (ve moment) tepe noktasına kadar büyür. Genelde 45-65 derece bandında maksimuma ulaşır, kritik açı aşılırsa azalmaya başlar."
+    "explanation": "Piyano, mandar operasyonunun kalbidir. Balon tam tepeye kilitlenmeden tor dolarsa yelken bayrak gibi açılır ve vinç gücüyle bile basılamaz."
   },
   {
-    "id": 3,
-    "term": "Piyano (Pit) Pozisyonu",
-    "category": "Yarış & Ekip Organizasyonu",
-    "definition": "Direk dibinden kokpite gelen tüm mandarlar (halyard), camadan halatları, kalingam (outhaul) ve pupa palangasının toplandığı kıstırmaç (stopper) bataryasını ve piyanist vincini yöneten mevkidir. Balon basma/indirme manevralarının orkestra şefidir.",
-    "question": "Yarışta spinnaker (balon) basılırken piyanistin (pit) en kritik koordinasyon görevi nedir?",
+    "id": "term-03",
+    "title": "VMG (Velocity Made Good)",
+    "category": "Taktik & Seyir",
+    "definition": "Teknenin suda yaptığı anlık hızın (speed through water) değil; hedeflenen rüzgar üstü veya rüzgar altı noktasına doğru birim zamanda katettiği net izdüşüm hızının vektörel ifadesidir.",
+    "fieldNote": "Orsaya çok sıkıp tekneyi 5.0 knot ile yürütmektense, 3 derece açıp 6.8 knot gitmek genellikle çok daha yüksek VMG üretir.",
+    "question": "Orsa şamandırasına tırmanırken tekne hızı (SOG) 7.2 knot'tan 7.6 knot'a çıkmasına rağmen VMG değeri düşüyorsa durum nedir?",
     "options": [
-      "Ana yelken arabasını rüzgarüstüne çekmek",
-      "Mandar hızlıca basılırken aynı anda kavança halatını boşlamak",
-      "Toka (guy) ve iskota gerilimini orantılayıp mandarı direk tepesine kitlemek",
-      "Dümeni orsaya kaçırmak"
-    ],
-    "correctIndex": 2,
-    "explanation": "Balonun torbalanmadan önce yukarıya hızla kilitlenmesi ve aynı anda tüpün açılması için pit ve direk dibi senkronize çalışmak zorundadır."
-  },
-  {
-    "id": 4,
-    "term": "23.95 Metre Tescil Taktiği",
-    "category": "Mevzuat & Armatörlük",
-    "definition": "Tam boyu (LOA) 26-28 metreye varan lüks motoryatların gövde boyunun (Hull Length) 23.95 metre altında tescil edilmesidir. Amaç, uluslararası denizcilik regülasyonlarında 24 metre üstü için zorunlu kılınan ağır gemi adamı kadrosu ve klas denetim maliyetlerinden muaf kalmaktır.",
-    "question": "24 metre tescil sınırını aşan bir özel motoryat için ortaya çıkan en belirgin işletme külfeti nedir?",
-    "options": [
-      "Motor gücünün sınırlandırılması",
-      "Ticari klasman ve sertifikalı zorunlu profesyonel mürettebat mecburiyeti",
-      "Gece seyrinin yasaklanması",
-      "Sadece çelik sac gövde kullanma zorunluluğu"
+      "Tekne rüzgara çok fazla yaklaşmış ve durma noktasına gelmiştir.",
+      "Tekne rotadan fazla açılmış (apaza kaçmış), su üstünde hızlansa da hedefe yaklaşma verimi azalmıştır.",
+      "Akıntı tekneyi hedefe doğru hızlandırmaktadır.",
+      "Yelkenler fazla gerilmiş ve rüzgarı boğmuştur."
     ],
     "correctIndex": 1,
-    "explanation": "24 metre eşiği aşıldığında amatör denizci mantığından çıkılır; profesyonel kaptan, çarkçı ve güverte tayfası bulundurma zorunluluğu doğar."
+    "explanation": "Hız artsa bile orsa açısından feragat edip hedeften uzaklaşırsanız net ilerleme (VMG) düşer. Amaç en yüksek sürat değil, hedefe en hızlı taşıyan bileşke hızdır."
+  },
+  {
+    "id": "term-04",
+    "title": "Hard Chine (Kırık Gövde Çizgisi)",
+    "category": "Hidrodinamik Mimari",
+    "definition": "Modern yarış ve gezi teknelerinin su hattı ile borda birleşiminde boydan boya uzanan keskin gövde bükümüdür. Tekne belirli bir açıda bayıldığında ikincil bir stabilite düzlemi oluşturarak gövdeyi kilitler ve dümendeki kontrolü artırır.",
+    "fieldNote": "Ayrıca kıç kabinlerde su hattı genişliğini bozmadan devasa bir iç hacim kazanımı sağlar.",
+    "question": "Gövdesinde belirgin 'Chine' hattı bulunan modern bir teknenin klasik yuvarlak karinalı gövdelere göre en belirgin dinamik avantajı nedir?",
+    "options": [
+      "Her havada motor yakıt tüketimini yarıya indirmesi.",
+      "Tekne bayıldığında su hattı form stabilitesini artırarak dümen yelpazesine binen yükü azaltması ve kaymayı zorlaştırması.",
+      "Salma ağırlığı ihtiyacını tamamen ortadan kaldırması.",
+      "Osmos oluşma riskini sıfıra indirmesi."
+    ],
+    "correctIndex": 1,
+    "explanation": "Chine çizgisi, bayılma anında dinamik bir basamak görevi görür. Su akışını yönlendirir, formu genişletir ve broşa (broach) düşme riskini öteler."
+  },
+  {
+    "id": "term-05",
+    "title": "Saildrive Taban Diyaframı (Rubber Gaiter)",
+    "category": "Mekanik & Güvenlik",
+    "definition": "Saildrive kuyruğunun gövdeden dışarı çıktığı açıklığı deniz suyuna karşı sızdırmaz kılan çift katmanlı özel elastomerik körük contasıdır. Üreticiler (Volvo Penta, Yanmar) tarafından genellikle 5 ila 7 yılda bir değişimi zorunlu tutulur.",
+    "fieldNote": "Ekspertiz sırasında üretim tarihi (DOT kodu) okunmalı ve körük yüzeyinde kılcal çatlak aranmalıdır.",
+    "question": "İkinci el bir yelkenli ekspertizinde saildrive körüğü ile ilgili en kritik kontrol kriteri hangisidir?",
+    "options": [
+      "Körüğün renginin siyaha boyanmış olması.",
+      "Kauçuğun imalat tarihi, elastikiyeti ve gövdeye basan metal baskı flanşındaki korozyon/su izleri.",
+      "Körüğün sadece tatlı su ile yıkanmış olması.",
+      "Körüğün pervane devrini artırıp artırmadığı."
+    ],
+    "correctIndex": 1,
+    "explanation": "Körük kauçuğu yaşlandıkça sertleşir ve çatlar. 7 yılı aşmış körükler yırtıldığında sintine dakikalar içinde deniz suyuyla dolar."
+  },
+  {
+    "id": "term-06",
+    "title": "Camadan (Reefing)",
+    "category": "Yelken Trimi & Emniyet",
+    "definition": "Rüzgar sertleştiğinde ana yelkenin alt yakasını bumba üzerine katlayarak yelken alanını küçültme ve teknenin bayılma merkezini (Center of Effort) aşağıya çekme işlemidir.",
+    "fieldNote": "Klasik yarışçı kuralı: 'Acaba camadan vursak mı?' diye aklınızdan geçtiği an, camadan vurma zamanı çoktan gelmiştir.",
+    "question": "Tek hatlı (single-line) otomatik camadan sistemlerinin klasik iki hatlı sistemlere göre potansiyel zayıflığı nedir?",
+    "options": [
+      "Yelkeni asla küçültememesi.",
+      "Bumba içi makaralardaki sürtünme direncinin yüksek olması sebebiyle matafyonun tam sıkılamaması ve halat sıkışma riski.",
+      "Ana yelkenin ağırlığını iki katına çıkarması.",
+      "Piyano vinçlerine yük bindirmemesi."
+    ],
+    "correctIndex": 1,
+    "explanation": "Single-line sistemler kokpitten pratik olsa da sürtünme yükü fazladır; ön/arka yaka gerilimleri yarış seviyesinde milimetrik ayarlanamaz."
+  },
+  {
+    "id": "term-07",
+    "title": "Salma Saplamaları & Smile Çatlağı",
+    "category": "Gövde Yapısal Kontrolü",
+    "definition": "Döküm demir veya kurşun salmanın gövde omurgasına bağlandığı paslanmaz çelik saplamaların (keel bolts) ve somunların oluşturduğu yapısal gruptur. Karaya oturmalarda salmanın ön ucunda oluşan ayrılma çizgisine tersanede 'keel smile' denir.",
+    "fieldNote": "Sintine tabanında saplama pullarının altındaki jelkot çatlakları veya pas sızıntıları yapısal zafiyet alarmıdır.",
+    "question": "Karada askıdaki bir teknenin salma-gövde birleşim çizgisinin ön tarafında kılcal bir yarık (smile) ve pas akıntısı tespit ettiniz. Bu neyin kanıtıdır?",
+    "options": [
+      "Zehirli boyanın kalın uygulandığının.",
+      "Teknenin yüksek hızla karaya oturduğunun, salmanın geriye esneyerek ön bağlantıyı kopardığının.",
+      "Dümen palasının gereğinden büyük olduğunun.",
+      "Teknenin çok fazla orsa seyri yaptığının normal bir sonucudur."
+    ],
+    "correctIndex": 1,
+    "explanation": "Karaya oturmada salma topuğu yere vurunca salmanın arka kısmı sintineye baskı yapıp matrixi çatlatırken, ön kısmı gövdeden aşağı çekilerek 'smile' aralığı oluşturur."
+  },
+  {
+    "id": "term-08",
+    "title": "Layline",
+    "category": "Regatta Taktiği",
+    "definition": "Rüzgar üstündeki bir şamandıraya başka bir tramola atmaksızın tam optimum orsa açısıyla varabileceğiniz teorik rota sınır çizgisidir.",
+    "fieldNote": "Layline çizgisine yarış sahasının çok uzağında erken girmek; rüzgar kafaya döndüğünde (header) teknenizi aşırı rotasız bırakır ve filonun gerisine düşürür.",
+    "question": "Rüzgar üstü şamandırasına yaklaşırken sancak layline'ına şamandıraya 1 mil kala erkenden oturmanın taktiksel riski nedir?",
+    "options": [
+      "Teknenin motorunun arızalanması.",
+      "Rüzgarın sağa veya sola yapacağı olası shift'lerden (dönüşlerden) faydalanma esnekliğini tamamen kaybedip köşeye sıkışmak.",
+      "TCC handikap katsayısının yarış ortasında artması.",
+      "Teknenin ağırlık merkezinin bozulması."
+    ],
+    "correctIndex": 1,
+    "explanation": "Layline'a erken girmek taktiksel esnekliği öldürür. Rüzgar dönüşlerinde (shift) avantaj sağlama şansınız biter."
+  },
+  {
+    "id": "term-09",
+    "title": "Kinistin Vanaları (Seacocks & Thru-Hulls)",
+    "category": "Sörvey & Emniyet",
+    "definition": "Tekne gövdesi altından motor soğutma suyu, tuvalet emiş/tahliye ve lavabo giderleri için açılan deliklerdeki bronz, pirinç veya kompozit kesici vanalardır.",
+    "fieldNote": "Sarı pirinç (brass) vanalar çinkosuzlaşma (dezincification) sebebiyle pembeleşir ve elle kırılacak kadar gevrek hale gelir. DZR bronz veya TruDesign kompozit tercih edilmelidir.",
+    "question": "Bir sörvey sırasında gövde altı vanasında pembe/kırmızı renkli lekeler ve kireçlenme görülmesi ne anlama gelir?",
+    "options": [
+      "Vananın yeni ve kaliteli bronz malzeme olduğunu gösterir.",
+      "Pirinç malzemedeki çinkonun galvanik korozyonla eridiğini (dezincification), vananın kırılmaya hazır olduğunu.",
+      "Tekneye aşırı zehirli astar sürüldüğünü.",
+      "Sintine pompasının çok sık çalıştığını."
+    ],
+    "correctIndex": 1,
+    "explanation": "Kalitesiz pirinç vanalardaki çinko elektrolizle ayrışır, geriye sadece süngerimsi kırılgan bakır kalır (pembe renk). Bu vana ilk torkta kırılarak su yapabilir."
+  },
+  {
+    "id": "term-10",
+    "title": "Cunningham",
+    "category": "Arma & Trim",
+    "definition": "Ana yelkenin orsa yakasının alt köşesine (karula köşesinin hemen üstüne) uygulanan dikey gergi halatıdır. Mandar gerginliğini değiştirmeden yelken torunu öne çekerek rüzgar boşaltmayı sağlar.",
+    "fieldNote": "Briggs Cunningham tarafından icat edilmiştir; yarışta direk büküldüğünde arkaya kaçan toru düzeltmenin en hızlı yoludur.",
+    "question": "Sertleşen havada cunningham halatını kasmak yelken profilinde hangi değişikliği yaratır?",
+    "options": [
+      "Yelkenin alt yakasını gevşeterek toru artırır.",
+      "Orsa yakasını gererek geriye kaçan toru öne çeker, yelkenin arka firar yakasını (leech) açarak rüzgarı tahliye eder.",
+      "Bumbayı rüzgar üstüne kaldırır.",
+      "Balonun açılmasını engeller."
+    ],
+    "correctIndex": 1,
+    "explanation": "Cunningham gerildiğinde yelkenin derinlik noktası öne kayar. Firar yakası rahatlar, bayılma azalır ve tekne rahatlar."
+  },
+  {
+    "id": "term-11",
+    "title": "Righting Moment (Doğrultucu Moment - RM)",
+    "category": "Gövde Fiziği",
+    "definition": "Rüzgarın yelkenler vasıtasıyla tekneyi yana yatırma kuvvetine karşı; salmanın ağırlığı ve gövdenin form stabilitesi sayesinde tekneyi dik tutmaya çalışan dinamik tork kuvvetidir.",
+    "fieldNote": "Karbon direk kullanımı tepeden 30-50 kg tasarruf sağlayarak doğrultucu momenti devasa oranda iyileştirir.",
+    "question": "Aynı gövdeye sahip iki yarış teknesinden birine alüminyum, diğerine karbon direk takılmıştır. Karbon direkli teknenin asıl üstünlüğü nedir?",
+    "options": [
+      "Teknenin motor yakıtını azaltması.",
+      "Ağırlık merkezinin aşağı inmesi sayesinde doğrultucu momentin (RM) artması, teknenin daha az bayılıp daha dar orsa açısıyla gidebilmesi.",
+      "IRC TCC katsayısının otomatikman düşmesi.",
+      "Pruva bodoslamasının hafiflemesi."
+    ],
+    "correctIndex": 1,
+    "explanation": "Direğin tepesindeki ağırlık azaltıldığında kaldıraç etkisi sebebiyle teknenin dik durma kabiliyeti katlanır."
+  },
+  {
+    "id": "term-12",
+    "title": "Delaminasyon & Akustik Çekiç Testi",
+    "category": "Kompozit & Sörvey",
+    "definition": "Sandviç gövde yapısında (balsa, PVC köpük veya karbon) elyaf katmanlarının çekirdek malzemeden ayrılması durumudur. Yapısal rijitliği sıfırlar; çekiçleme akustik testi veya ultrasonik cihazlarla teşhis edilir.",
+    "fieldNote": "Özellikle güverte donanım ayakları (vinç, araba rayları) etrafındaki su sızıntıları balsa çekirdeği çürüterek gizli delaminasyona yol açar.",
+    "question": "Sörvey çekici ile güverteye vurulduğunda tok ve tiz bir ses yerine 'boş ve donuk' bir ses gelmesi neye işaret eder?",
+    "options": [
+      "Jelkotun fabrika çıkışı çok kalın atıldığına.",
+      "Laminat katmanları arasında ayrılma (delaminasyon) veya sandviç çekirdeğinde çürüme/nem olduğuna.",
+      "Teknenin osmoz bağışıklığı kazandığına.",
+      "Güverte altındaki izolasyonun eksiksiz olduğuna."
+    ],
+    "correctIndex": 1,
+    "explanation": "Akustik çekiçleme testinde donuk ses delaminasyonu ele verir. Katmanlar birbirinden koptuğu için darbe enerjisi yayılamaz."
+  },
+  {
+    "id": "term-13",
+    "title": "Outhaul (Bumba Gergi Palangası)",
+    "category": "Yelken Trimi",
+    "definition": "Ana yelkenin alt yakasının bumba cundasına (ucuna) bağlandığı ve yelkenin alt torunu ayarlayan trim donanımıdır.",
+    "fieldNote": "Apaz ve pupada gevşetilerek alt yakaya tor verilir; orsa seyrinde bumba ucuna kadar gerilerek alt yaka düzleştirilir.",
+    "question": "Hafif havada geniş apaz veya pupa seyrine geçerken outhaul palangasını laçka etmenin temel amacı nedir?",
+    "options": [
+      "Bumbanın kırılmasını engellemek.",
+      "Yelkenin alt yakasına kamber (tor) kazandırarak düşük hızlı hava akışında tutunmayı ve çekiş gücünü artırmak.",
+      "Teknenin su kesimini azaltmak.",
+      "Dümen palasını kilitlemek."
+    ],
+    "correctIndex": 1,
+    "explanation": "Outhaul laçka edildiğinde ana yelkenin alt bölümü torlanır. Düşük rüzgarda laminer hava akışının tutunması için kamber şarttır."
+  },
+  {
+    "id": "term-14",
+    "title": "Rod Arma vs. Kompakt Tel Arma",
+    "category": "Arma Mühendisliği",
+    "definition": "Performans teknelerinde çoklu tellerden örülmüş halat yerine tek parça katı paslanmaz çelik çubukların (Nitronic 50 rod) kullanıldığı sabit arma sistemidir.",
+    "fieldNote": "Rod arma esnemez (minimum stretch); ancak tel gibi tel tel açılarak uyarı vermez, yorulma ömrü dolduğunda aniden kırılır.",
+    "question": "Rod (çubuk) arma kullanılan bir teknede periyodik muayenede en çok hangi bölgeye kontrol yapılmalıdır?",
+    "options": [
+      "Çubuğun tam orta gövdesine.",
+      "Cold-headed rod başlıklarının liftin kovanına ve kurtgözüne oturduğu mantar başlı boğumlarına.",
+      "Bastonun ucundaki makaralara.",
+      "Direk fenerinin kablo girişine."
+    ],
+    "correctIndex": 1,
+    "explanation": "Rod armalarda kırılmalar uç noktalardaki preslenmiş mantar başlı (cold-headed) boğumlardaki mikro çatlaklardan başlar."
+  },
+  {
+    "id": "term-15",
+    "title": "Barber Hauler (In-Hauler)",
+    "category": "Yelken Trimi & Açı",
+    "definition": "Flok/cenova iskotasının güvertedeki arabasından çıktıktan sonra, iskotanın açısını içeriye (in-hauler) veya dışarıya (out-hauler) çekerek yelkenin firar yakası bükümünü (twist) ve orsa açısını milimetrik ayarlayan yardımcı trim palangasıdır.",
+    "fieldNote": "Modern IRC yarışçılarında in-hauler çekilerek flok orsa açısı 6-7 derecelere kadar daraltılır ve rakiplerin üstüne tırmanılır.",
+    "question": "Düz orsa rotasında flok 'In-Hauler' donanımını kasmak ne işe yarar?",
+    "options": [
+      "Flok arabasını tamamen arkaya iter.",
+      "Iskota arabasının açısını teknenin merkez hattına (centerline) doğru çekerek orsa açısını daraltır ve daha yüksek tırmanma sağlar.",
+      "Balonun direğe dolanmasını engeller.",
+      "Teknenin başını suya gömer."
+    ],
+    "correctIndex": 1,
+    "explanation": "In-hauler, iskota kılavuzunu güvertenin içine doğru çeker. Yelken gövde merkez hattına daha paralel basılır ve tekne daha dik tırmanır."
   }
 ]
