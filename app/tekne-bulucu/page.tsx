@@ -7,17 +7,17 @@ import boatsData from '../../data/boats.json';
 interface Boat {
   id: string;
   name: string;
-  segment: string;
-  category: string;
-  origin: string;
-  designer: string;
-  hullEngine: string;
-  highlight: string;
-  pros: string[];
-  targetAudience: string;
+  segment?: string;
+  category?: string;
+  origin?: string;
+  designer?: string;
+  hullEngine?: string;
+  highlight?: string;
+  pros?: string[];
+  targetAudience?: string;
 }
 
-const boats = boatsData as unknown as Boat[]; // veya (boatsData as any)
+const boats = boatsData as unknown as Boat[];
 
 export default function TekneBulucu() {
   const [step, setStep] = useState(1);
@@ -37,16 +37,19 @@ export default function TekneBulucu() {
     setStep(1);
   };
 
-  // Eşleştirme mantığı
+  // Eşleştirme ve filtreleme mantığı (null-safe ve genişletilmiş)
   const filteredBoats = boats.filter((boat) => {
+    const seg = (boat.segment || '').toLowerCase();
+    const cat = (boat.category || '').toLowerCase();
+
     if (preferences.purpose === 'racing') {
-      return boat.segment.toLowerCase().includes('yarış') || boat.category.toLowerCase().includes('yarış');
+      return seg.includes('yarış') || cat.includes('yarış') || seg.includes('racer') || seg.includes('karbon');
     }
     if (preferences.purpose === 'cruising') {
-      return boat.category.toLowerCase().includes('gezi') || boat.segment.toLowerCase().includes('gezi');
+      return cat.includes('gezi') || seg.includes('gezi') || seg.includes('cruiser');
     }
     if (preferences.purpose === 'motor_yacht') {
-      return boat.category.toLowerCase().includes('motor') || boat.segment.toLowerCase().includes('motoryat');
+      return cat.includes('motor') || seg.includes('motoryat') || seg.includes('trawler') || seg.includes('yat');
     }
     return true;
   });
@@ -221,44 +224,56 @@ export default function TekneBulucu() {
                     <div className="flex justify-between items-start">
                       <div>
                         <span className="text-xs font-mono uppercase text-cyan-400 tracking-wider">
-                          {boat.segment}
+                          {boat.segment || 'Özel Seri'}
                         </span>
                         <h2 className="text-2xl font-bold text-white mt-1">{boat.name}</h2>
                       </div>
-                      <span className="text-xs px-2.5 py-1 bg-slate-800 text-slate-300 rounded font-mono">
-                        {boat.origin}
-                      </span>
+                      {boat.origin && (
+                        <span className="text-xs px-2.5 py-1 bg-slate-800 text-slate-300 rounded font-mono">
+                          {boat.origin}
+                        </span>
+                      )}
                     </div>
 
-                    <p className="text-xs text-slate-300 italic bg-slate-950/50 p-3 rounded-lg border border-slate-800/50">
-                      "{boat.highlight}"
-                    </p>
+                    {boat.highlight && (
+                      <p className="text-xs text-slate-300 italic bg-slate-950/50 p-3 rounded-lg border border-slate-800/50">
+                        "{boat.highlight}"
+                      </p>
+                    )}
 
                     <div className="text-xs space-y-1.5 text-slate-400 font-mono">
-                      <div><strong className="text-slate-300">Tasarımcı:</strong> {boat.designer}</div>
-                      <div><strong className="text-slate-300">Gövde / Güç:</strong> {boat.hullEngine}</div>
-                      <div><strong className="text-slate-300">Hedef Kitle:</strong> {boat.targetAudience}</div>
+                      {boat.designer && (
+                        <div><strong className="text-slate-300">Tasarımcı:</strong> {boat.designer}</div>
+                      )}
+                      {boat.hullEngine && (
+                        <div><strong className="text-slate-300">Gövde / Güç:</strong> {boat.hullEngine}</div>
+                      )}
+                      {boat.targetAudience && (
+                        <div><strong className="text-slate-300">Hedef Kitle:</strong> {boat.targetAudience}</div>
+                      )}
                     </div>
 
-                    <div className="pt-2">
-                      <div className="text-xs font-semibold text-slate-300 mb-2">Öne Çıkan Artılar:</div>
-                      <ul className="space-y-1">
-                        {boat.pros.map((pro, index) => (
-                          <li key={index} className="text-xs text-slate-400 flex items-center gap-2">
-                            <span className="text-cyan-400 font-bold">✓</span> {pro}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+                    {boat.pros && boat.pros.length > 0 && (
+                      <div className="pt-2">
+                        <div className="text-xs font-semibold text-slate-300 mb-2">Öne Çıkan Artılar:</div>
+                        <ul className="space-y-1">
+                          {boat.pros.map((pro, index) => (
+                            <li key={index} className="text-xs text-slate-400 flex items-center gap-2">
+                              <span className="text-cyan-400 font-bold">✓</span> {pro}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
                   </div>
 
                   <div className="pt-6 border-t border-slate-800/60 mt-6">
-                    <a
-                      href={`/#${boat.id}`}
+                    <Link
+                      href={`/tekne/${boat.id}`}
                       className="block text-center w-full py-2.5 rounded-lg bg-cyan-600 hover:bg-cyan-500 text-white text-xs font-bold uppercase tracking-wider transition"
                     >
-                      Detaylı Analizi Gör
-                    </a>
+                      Detaylı Analizi Gör →
+                    </Link>
                   </div>
                 </div>
               ))}
@@ -267,7 +282,7 @@ export default function TekneBulucu() {
             <div className="text-center pt-4">
               <button
                 onClick={resetWizard}
-                className="text-xs font-mono text-slate-400 hover:text-cyan-400 underline underline-offset-4 transition"
+                className="text-xs font-mono text-slate-400 hover:text-cyan-400 underline underline-offset-4 transition cursor-pointer"
               >
                 ⟲ Parametreleri Sıfırla ve Yeniden Başla
               </button>

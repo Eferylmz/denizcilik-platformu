@@ -1,5 +1,8 @@
 import Link from 'next/link';
 import boatsData from '../data/boats.json';
+import DailyMaritime from '@/components/DailyMaritime';
+import dailyData from '@/data/termsAndQuiz.json';
+
 interface Boat {
   id: string;
   name: string;
@@ -12,33 +15,37 @@ interface Boat {
   pros: string[];
   targetAudience?: string;
 }
-import DailyMaritime from '@/components/DailyMaritime';
-import dailyData from '@/data/termsAndQuiz.json';
 
 const boats: Boat[] = boatsData as unknown as Boat[];
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-slate-950 text-slate-100 selection:bg-cyan-500 selection:text-white">
+    <main className="min-h-screen bg-slate-950 text-slate-100 selection:bg-cyan-500 selection:text-white pb-20">
       {/* Üst Menü */}
       <header className="border-b border-slate-800/80 bg-slate-900/50 backdrop-blur sticky top-0 z-50 px-6 py-4 flex items-center justify-between max-w-7xl mx-auto">
         <div className="flex items-center gap-2">
-          <span className="text-xl font-black tracking-wider text-cyan-400">PRUVA</span>
-          <span className="text-xs uppercase px-2 py-0.5 rounded bg-cyan-950 text-cyan-400 border border-cyan-800 font-semibold tracking-wider">
+          <Link href="/" className="text-xl font-black tracking-wider text-cyan-400">PRUVA</Link>
+          <span className="text-xs uppercase px-2 py-0.5 rounded bg-cyan-950 text-cyan-400 border border-cyan-800 font-semibold tracking-wider hidden sm:inline-block">
             Yarış &amp; Pazar Analizi
           </span>
         </div>
-        <nav className="flex items-center gap-6 text-sm font-medium text-slate-300">
-  <a href="#modeller" className="hover:text-cyan-400 transition">Modeller</a>
-  <Link href="/dinamikler" className="hover:text-cyan-400 transition">Yelken & Motor Mekaniği</Link>
-  <Link
-    href="/tekne-bulucu"
-    className="bg-cyan-600 hover:bg-cyan-500 text-white px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider transition"
-  >
-    Tekne Bulucu
-  </Link>
-</nav>
-        
+        <nav className="flex items-center gap-4 sm:gap-6 text-sm font-medium text-slate-300">
+          <a href="#modeller" className="hover:text-cyan-400 transition">Modeller</a>
+          <Link href="/rating-hesaplayici" className="hover:text-cyan-400 transition hidden md:inline-block">
+            Rating Simülatörü
+          </Link>
+          <Link href="/ekspertiz-radari" className="text-amber-400 hover:text-amber-300 font-semibold transition flex items-center gap-1.5">
+            <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
+            Ekspertiz Radarı
+          </Link>
+          <Link href="/dinamikler" className="hover:text-cyan-400 transition hidden lg:inline-block">Yelken &amp; Mekanik</Link>
+          <Link
+            href="/tekne-bulucu"
+            className="bg-cyan-600 hover:bg-cyan-500 text-white px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider transition"
+          >
+            Tekne Bulucu
+          </Link>
+        </nav>
       </header>
 
       {/* Hero Bölümü */}
@@ -64,12 +71,18 @@ export default function Home() {
             >
               Hangi Tekne Sana Uygun? (Testi Çöz)
             </Link>
-            <a 
-              href="#modeller" 
-              className="bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-200 font-semibold px-6 py-3.5 rounded-xl transition"
+            <Link 
+              href="/ekspertiz-radari" 
+              className="bg-amber-950/80 hover:bg-amber-900/90 border border-amber-800/80 text-amber-300 font-semibold px-6 py-3.5 rounded-xl transition flex items-center gap-2"
             >
-              Modelleri İncele
-            </a>
+              <span>🔍 Sörvey Radarı</span>
+            </Link>
+            <Link 
+              href="/rating-hesaplayici" 
+              className="bg-slate-900 hover:bg-slate-800 border border-slate-700 text-cyan-300 font-semibold px-6 py-3.5 rounded-xl transition flex items-center gap-2"
+            >
+              <span>⚡ Rating Simülatörü</span>
+            </Link>
           </div>
         </div>
 
@@ -93,9 +106,54 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* İnteraktif Araçlar İkili Grid Banner'ı */}
+      <section className="max-w-7xl mx-auto px-6 mb-12">
+        <div className="grid md:grid-cols-2 gap-6">
+          {/* Rating Kartı */}
+          <div className="bg-gradient-to-r from-cyan-950/40 via-slate-900 to-slate-900 border border-cyan-800/50 rounded-2xl p-6 flex flex-col justify-between space-y-4 shadow-xl">
+            <div className="space-y-2">
+              <span className="text-xs font-mono uppercase tracking-widest text-cyan-400 bg-cyan-950 border border-cyan-800 px-3 py-1 rounded-full">
+                Mühendislik Aracı
+              </span>
+              <h2 className="text-xl font-bold text-white pt-1">IRC TCC &amp; ORC GPH Simülatörü</h2>
+              <p className="text-slate-400 text-xs leading-relaxed">
+                Su hattı boyu, deplasman, yelken alanı ve donanım değişikliklerine göre handikap katsayınızı hesaplayın.
+              </p>
+            </div>
+            <Link
+              href="/rating-hesaplayici"
+              className="inline-flex items-center justify-center bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold px-4 py-2.5 rounded-xl transition text-xs shadow-md shadow-cyan-950/50"
+            >
+              Simülatörü Başlat →
+            </Link>
+          </div>
+
+          {/* Ekspertiz Radarı Kartı */}
+          <div className="bg-gradient-to-r from-amber-950/40 via-slate-900 to-slate-900 border border-amber-800/50 rounded-2xl p-6 flex flex-col justify-between space-y-4 shadow-xl">
+            <div className="space-y-2">
+              <span className="text-xs font-mono uppercase tracking-widest text-amber-400 bg-amber-950 border border-amber-800 px-3 py-1 rounded-full">
+                Sörveyör Aracı
+              </span>
+              <h2 className="text-xl font-bold text-white pt-1">İnteraktif Sörvey &amp; Ekspertiz Radarı</h2>
+              <p className="text-slate-400 text-xs leading-relaxed">
+                Salma saplamaları, matrix çatlakları, saildrive körüğü ve osmoz nem baremlerini işaretleyin, canlı sağlık skorunu görün.
+              </p>
+            </div>
+            <Link
+              href="/ekspertiz-radari"
+              className="inline-flex items-center justify-center bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-4 py-2.5 rounded-xl transition text-xs shadow-md shadow-amber-950/50"
+            >
+              Radarı Aç →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Günün Terimi & Quiz */}
       <div className="max-w-6xl mx-auto px-6 my-12">
-  <DailyMaritime data={dailyData} />
-</div>
+        <DailyMaritime data={dailyData} />
+      </div>
 
       {/* Model Kartları Bölümü */}
       <section id="modeller" className="max-w-7xl mx-auto px-6 py-16 border-t border-slate-800/80">
@@ -132,9 +190,17 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="pt-4 border-t border-slate-800/80">
-                <span className="text-[11px] text-slate-400 block mb-1">Hedef Kitle:</span>
-                <p className="text-xs text-slate-300 font-medium">{boat.targetAudience}</p>
+              <div className="pt-4 border-t border-slate-800/80 space-y-4">
+                <div>
+                  <span className="text-[11px] text-slate-400 block mb-1">Hedef Kitle:</span>
+                  <p className="text-xs text-slate-300 font-medium">{boat.targetAudience}</p>
+                </div>
+                <Link
+                  href={`/tekne/${boat.id}`}
+                  className="block text-center w-full py-2 rounded-lg bg-slate-800 hover:bg-cyan-600 text-slate-200 hover:text-white text-xs font-bold transition"
+                >
+                  Tekne Detayı &amp; Ekspertiz İncele →
+                </Link>
               </div>
             </div>
           ))}
